@@ -1,0 +1,838 @@
+Pattern Question: 
+1. 
+* * * * * 
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+2.
+* 
+* *
+* * *
+* * * *
+* * * * *
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q3.
+1 
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q4.
+1 
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q5. 
+* * * * * 
+* * * *
+* * *
+* *
+*
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = n - i + 1; j > 0; j--)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q6.
+1 2 3 4 5 
+1 2 3 4
+1 2 3
+1 2
+1
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}	
+
+Q7.
+        * 
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * * 
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print spaces
+        for (int j = n - i; j > 0; j--)
+        {
+            cout << "  ";
+        }
+        // code to print stars
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q8.
+* * * * * 
+ * * * *
+  * * *
+   * *
+    *
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print spaces
+        for (int j = 1; j < i; j++)
+        {
+            cout << " ";
+        }
+        // code to print stars
+        for (int j = n - i + 1; j > 0; j--)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q9.
+        * 
+      * * *
+    * * * * *
+  * * * * * * * 
+* * * * * * * * *
+* * * * * * * * *
+  * * * * * * * 
+    * * * * *
+      * * *
+        *
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    // Print Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print spaces
+        for (int j = n - i; j > 0; j--)
+        {
+            cout << "  ";
+        }
+        // code to print stars
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // Print Lower Half Part
+    for (int i = n; i > 0; i--)
+    {
+        // code to print spaces
+        for (int j = 1; j < n - i + 1; j++)
+        {
+            cout << "  ";
+        }
+        // code to print stars
+        for (int j = 2 * i - 1; j > 0; j--)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q10.
+* 
+* *
+* * *
+* * * *
+* * * * *
+* * * * 
+* * *
+* *
+*
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    // Print Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print stars
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // Print Lower Half Part
+    for (int i = n - 1; i > 0; i--)
+    {
+        // code to print stars
+        for (int j = i; j > 0; j--)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q11.
+1 
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    // Print Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            int sum = i + j;
+            if (sum % 2 == 0)
+            {
+                cout << "1 ";
+            }
+            else
+            {
+                cout << "0 ";
+            }
+        }
+
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q12.
+1      1
+12    21
+123  321
+12344321
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    // Print Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print first Half Number
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j;
+        }
+
+        // Code to print spaces
+        for (int j = 2 * (n - i); j > 0; j--)
+        {
+            cout << " ";
+        }
+
+        // Code to print second Half
+        for (int j = i; j >= 1; j--)
+        {
+            cout << j;
+        }
+
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q13.
+1 
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    int s = 0;
+    // Print Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print first Half Number
+        for (int j = 1; j <= i; j++)
+        {
+            s = s + 1;
+            cout << s << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q14.
+A 
+A B
+A B C
+A B C D
+A B C D E
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        // code to print first Half Number
+        for (int j = 1; j <= i; j++)
+        {
+            cout << char(65 + j - 1) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q15. 
+A B C D E 
+A B C D
+A B C
+A B
+A
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = n; i > 0; i--)
+    {
+        // code to print first Half Number
+        for (int j = 1; j <= i; j++)
+        {
+            cout << char(65 + j - 1) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q16.
+A 
+B B
+C C C
+D D D D
+E E E E E
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+
+        for (int j = 1; j <= i; j++)
+        {
+            cout << char(65 + i - 1) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q17.
+      A 
+    A B A
+  A B C B A
+A B C D C B A
+
+Ans.#include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+
+        // Code to print spaces
+        for (int j = n - i; j > 0; j--)
+        {
+            cout << "  ";
+        }
+
+        for (int j = 1; j <= i; j++)
+        {
+            cout << char(65 + j - 1) << " ";
+        }
+        for (int j = i - 1; j > 0; j--)
+        {
+            cout << char(65 + j - 1) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q18.
+E 
+D E
+C D E
+B C D E
+A B C D E
+
+Ans. #include <iostream>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = n; i >= 1; i--)
+    {
+        for (int j = i; j <= n; j++)
+        {
+            cout << char(65 + j - 1) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter Number of Rows: ";
+    cin >> n;
+    printPattern(n);
+    return 0;
+}
+
+Q19.
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+void printPattern(int n)
+{
+    // Code to Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // Code to print Star
+        for (int j = n; j >= i; j--)
+        {
+            cout << "*";
+        }
+        // code to print space
+        for (int j = i; j <= 2 * (i - 1); j++)
+        {
+            cout << "  ";
+        }
+        // Code to print Star
+        for (int j = n; j >= i; j--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // Code to Lower Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // Code to print star
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+
+        // Code to print spaces
+        for (int j = 2 * (n - i); j > 0; j--)
+        {
+            cout << " ";
+        }
+
+        // Code to print star
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int row;
+    cout << "Enter Number of Line: ";
+    cin >> row;
+    printPattern(row);
+    return 0;
+}
+
+Q20. 
+*        *
+**      **
+***    ***
+****  ****
+**********
+****  ****
+***    ***
+**      **
+*        *
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+void printPattern(int n)
+{
+    // Code to Upper Half Part
+    for (int i = 1; i <= n; i++)
+    {
+        // Code to print star
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        // Code to print spaces
+        for (int j = 2 * (n - i); j > 0; j--)
+        {
+            cout << " ";
+        }
+        // Code to print star
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // Code to print lower half part
+    for (int i = 1; i < n; i++)
+    {
+
+        // code to print star
+        for (int j = n - i; j > 0; j--)
+        {
+            cout << "*";
+        }
+
+        // Code to print spaces
+        for (int j = 1; j <= 2 * i; j++)
+        {
+            cout << " ";
+        }
+
+        // code to print star
+        for (int j = n - i; j > 0; j--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int row;
+    cout << "Enter Number of Line: ";
+    cin >> row;
+    printPattern(row);
+    return 0;
+}
+
+Q21.
+* * * * 
+*     *
+*     *
+* * * *
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+void printPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if (i == n || j == n || i == 1 || j == 1)
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int row;
+    cout << "Enter Number of Line: ";
+    cin >> row;
+    printPattern(row);
+    return 0;
+}
+
+Q22.
+
+Ans.
