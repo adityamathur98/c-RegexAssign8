@@ -833,6 +833,36 @@ int main()
     return 0;
 }
 
-Q22.
+Q22. 
+4444444
+4333334
+4322234
+4321234
+4322234
+4333334
+4444444
 
-Ans.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int row;
+    cout << "Enter the Number of Rows: ";
+    cin >> row;
+
+    for (int i = 1; i < 2 * row; i++)
+    {
+        for (int j = 1; j < 2 * row; j++)
+        {
+            int top = i;
+            int left = j;
+            int right = (2 * row) - j;
+            int bottom = (2 * row) - i;
+            cout << (row - min(min(top, bottom), min(right, left)) + 1);
+        }
+        cout << endl;
+    }
+    return 0;
+}
